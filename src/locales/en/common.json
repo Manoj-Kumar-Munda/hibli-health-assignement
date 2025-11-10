@@ -1,0 +1,9 @@
+{
+  "dashboard": {
+    "title": "Dashboard",
+    "description": "Welcome to your dashboard!"
+  },
+  "usersList": {
+    "title": "Users List"
+  }
+}
