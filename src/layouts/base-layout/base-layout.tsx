@@ -4,6 +4,7 @@ import { Layout, Menu } from 'antd'
 import React from 'react'
 import classes from './base-layout.module.scss'
 import type { MenuProps } from 'antd'
+import { defaultUserListParams } from '@/utils/constants'
 
 type MenuItem = Required<MenuProps>['items'][number]
 
@@ -17,6 +18,15 @@ const BaseLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         key: '/',
         label: <Link to="/">Dashboard</Link>,
         icon: <HomeOutlined />,
+      },
+      {
+        key: '/users/list',
+        label: (
+          <Link search={defaultUserListParams} to="/users/list">
+            Users List
+          </Link>
+        ),
+        icon: <UserOutlined />,
       },
     ],
     [],
@@ -43,7 +53,7 @@ const BaseLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           John Doe
         </div>
       </Layout.Header>
-      <Layout.Content>{children}</Layout.Content>
+      <Layout.Content className="tw:p-8">{children}</Layout.Content>
     </Layout>
   )
 }

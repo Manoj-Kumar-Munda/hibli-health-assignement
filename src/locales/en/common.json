@@ -1,7 +1,13 @@
 {
   "dashboard": {
-    "title": "Dashboard",
-    "description": "Welcome to your dashboard!"
+    "title": "Welcome to UserManager",
+
+    "cardHeaders": {
+      "totalUsers": "Total Users",
+      "activeUsers": "Active Users",
+      "inactiveUsers": "Inactive Users"
+    },
+    "tableHeader": "Last active users"
   },
   "usersList": {
     "title": "Users List"

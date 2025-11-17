@@ -8,6 +8,7 @@ import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 import { ConfigProvider } from 'antd'
 import enUS from 'antd/locale/en_US'
 import React from 'react'
+import type { ThemeConfig } from 'antd'
 import type { QueryClient } from '@tanstack/react-query'
 import BaseLayout from '@/layouts/base-layout'
 
@@ -15,9 +16,15 @@ interface MyRouterContext {
   queryClient: QueryClient
 }
 
+const theme: ThemeConfig = {
+  token: {
+    fontFamily: 'var(--font-family)',
+  },
+}
+
 const RootComponent: React.FunctionComponent = () => {
   return (
-    <ConfigProvider locale={enUS}>
+    <ConfigProvider locale={enUS} theme={theme}>
       <BaseLayout>
         <Outlet />
         <TanStackRouterDevtools />
